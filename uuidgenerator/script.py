@@ -3,7 +3,11 @@ import uuid
 
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb+srv://mongouser:mongoisbest@cluster0.9nbsswg.mongodb.net/?retryWrites=true&w=majority"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+MONGO_URI = os.getenv('MONGO_URI')
 
 # For Adani Database
 def db_name():
